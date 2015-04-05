@@ -1,0 +1,43 @@
+/*
+* by Ilya Dubkov
+* 05 april 2015
+*/
+
+#include "..\..\q16.h"
+
+#define CLK 13
+#define STB 12
+#define OE 11
+#define C 10
+#define B 9
+#define A 8
+#define TD 7
+#define BD 6
+
+q16 matrix = q16(CLK, STB, OE, C, B, A, TD, BD);
+
+uint16_t theBigX[ROWSNUM]={
+	0b0000000000000000,
+	0b1111000000001111,
+	0b0110000000000110,
+	0b0011000000001100,
+	0b0001100000011000,
+	0b0000110000110000,
+	0b0000011001100000,
+	0b0000001111000000,
+	0b0000001111000000,
+	0b0000011001100000,
+	0b0000110000110000,
+	0b0001100000011000,
+	0b0011000000001100,
+	0b0110000000000110,
+	0b1111000000001111,
+	0b0000000000000000
+};
+
+void setup(){}
+
+void loop()
+{
+	matrix.display(theBigX);
+}
