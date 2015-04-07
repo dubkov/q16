@@ -3,7 +3,7 @@
 * 05 april 2015
 */
 
-#include "..\..\q16.h"
+#include <q16.h>
 
 #define CLK 13
 #define STB 12
